@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@onready var active = true
+@onready var active = false
 @onready var gunRay = $Head/Camera3d/RayCast3d as RayCast3D
 @onready var Cam = $Head/Camera3d as Camera3D
 @export var _bullet_scene : PackedScene
@@ -41,13 +41,13 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _input(event):
-	if !active: return
-	if event is InputEventMouseMotion:
-		rotation.y -= event.relative.x / mouseSensibility
-		$Head/Camera3d.rotation.x -= event.relative.y / mouseSensibility
-		$Head/Camera3d.rotation.x = clamp($Head/Camera3d.rotation.x, deg_to_rad(-90), deg_to_rad(90) )
-		mouse_relative_x = clamp(event.relative.x, -50, 50)
-		mouse_relative_y = clamp(event.relative.y, -50, 10)
+	if active:
+		if event is InputEventMouseMotion:
+			rotation.y -= event.relative.x / mouseSensibility
+			$Head/Camera3d.rotation.x -= event.relative.y / mouseSensibility
+			$Head/Camera3d.rotation.x = clamp($Head/Camera3d.rotation.x, deg_to_rad(-90), deg_to_rad(90) )
+			mouse_relative_x = clamp(event.relative.x, -50, 50)
+			mouse_relative_y = clamp(event.relative.y, -50, 10)
 
 func shoot():
 	if not gunRay.is_colliding():
