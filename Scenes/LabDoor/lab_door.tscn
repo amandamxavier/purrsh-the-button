@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://isfvqna3kvd0"]
+
+[ext_resource type="PackedScene" uid="uid://dfnhlnmhdvv8q" path="res://Scenes/LabDoor/lab-door.glb" id="1_iauxu"]
+[ext_resource type="Script" path="res://Scenes/LabDoor/lab_door.gd" id="2_dhe5d"]
+
+[node name="lab-door" instance=ExtResource("1_iauxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49475, 0)
+script = ExtResource("2_dhe5d")
