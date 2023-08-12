@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ctahsvj88g1om"]
+[gd_scene load_steps=11 format=3 uid="uid://ctahsvj88g1om"]
 
 [ext_resource type="Script" path="res://addons/devblocks/blocks/levels/node_3d.gd" id="1_fu7wh"]
 [ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="2_7x3q6"]
 [ext_resource type="PackedScene" uid="uid://7gv6q50fuutj" path="res://Scenes/Player/player.tscn" id="3_1aacv"]
 [ext_resource type="PackedScene" uid="uid://bhonqb46wwjn5" path="res://Scenes/Pet/pet.tscn" id="4_k8mw0"]
 [ext_resource type="Texture2D" uid="uid://cgp4mvev1cbra" path="res://addons/devblocks/textures/purple/texture_01.png" id="5_vykad"]
+[ext_resource type="PackedScene" uid="uid://cfch5btef6n71" path="res://Scenes/FloorButton/FloorButton.tscn" id="6_uym3n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
 
@@ -68,3 +69,6 @@ material = SubResource("StandardMaterial3D_2gtf0")
 transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 4, -13.0662, 2.84246, -1.36987)
 block_color_group = 1
 block_style = 2
+
+[node name="floor-button-mesh" parent="." instance=ExtResource("6_uym3n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.396229, 0.5, -2.02722)
