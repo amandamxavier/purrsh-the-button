@@ -16,14 +16,12 @@ func _process(delta):
 	pass
 
 func _on_interact_area_body_entered(body):
-	print("ENTER")
 	if (toggables.size() > 0 && body.get_class() == "CharacterBody3D"):
 		bodies += 1
 		for toggable in toggables:
 			toggable.call('_toggle_on')
 
 func _on_interact_area_body_exited(body):
-	print("EXIT")
 	bodies -= 1
 	if (toggables.size() > 0 && bodies <= 0):
 		for toggable in toggables:

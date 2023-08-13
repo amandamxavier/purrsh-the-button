@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://2xmdpllnburh"]
+
+[ext_resource type="PackedScene" uid="uid://dmwiy0pfsjg18" path="res://Scenes/LabDoorDisplay/lab-door-display.glb" id="1_pjequ"]
+[ext_resource type="Script" path="res://Scenes/LabDoorDisplay/lab_door_display.gd" id="2_2pmao"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wutvj"]
+size = Vector3(5.00989, 4.00671, 8.00151)
+
+[node name="lab-door-display" instance=ExtResource("1_pjequ")]
+script = ExtResource("2_2pmao")
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.166413, 2.08165e-12, 3.5, 2.08165e-12)
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0038, 0.940546)
+shape = SubResource("BoxShape3D_wutvj")
+
+[connection signal="body_shape_entered" from="Area3D" to="." method="_on_area_3d_body_shape_entered"]
+[connection signal="body_shape_exited" from="Area3D" to="." method="_on_area_3d_body_shape_exited"]
