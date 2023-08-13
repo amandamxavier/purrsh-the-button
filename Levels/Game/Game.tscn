@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Levels/Game/Game.gd" id="1_ouojl"]
 [ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="2_f4qtv"]
-[ext_resource type="Script" path="res://addons/devblocks/blocks/finishblock.gd" id="3_oj27e"]
 [ext_resource type="PackedScene" uid="uid://7gv6q50fuutj" path="res://addons/devblocks/blocks/player.tscn" id="3_yfuw8"]
 [ext_resource type="PackedScene" uid="uid://bhonqb46wwjn5" path="res://Scenes/Pet/pet.tscn" id="4_wdidq"]
 [ext_resource type="PackedScene" uid="uid://cfch5btef6n71" path="res://Scenes/FloorButton/FloorButton.tscn" id="5_aa15f"]
@@ -16,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ch5a1b76gdrn3" path="res://Assets/Shelf/shelf.tscn" id="13_tyo1w"]
 [ext_resource type="AudioStream" uid="uid://cfvk4m6r06j2s" path="res://Assets/Musics/Main.ogg" id="14_rpiy4"]
 [ext_resource type="Script" path="res://Levels/Game/AudioStreamPlayer.gd" id="15_qvusi"]
+[ext_resource type="PackedScene" uid="uid://wyklfnojogcw" path="res://Assets/FinishArea/FinishArea.tscn" id="16_4xxgf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xgk24"]
 
@@ -56,9 +56,9 @@ block_color_group = 2
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 40, 16.711, 6.65126, -61.9051)
 block_color_group = 2
 
-[node name="FinishBlock" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 5, 10.1669, 9.53662, -64.3111)
-script = ExtResource("3_oj27e")
+[node name="BasicBlock7" parent="." instance=ExtResource("2_f4qtv")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 1.72229, 6.65126, -65.0866)
+block_color_group = 2
 
 [node name="BasicBlock6" parent="." instance=ExtResource("2_f4qtv")]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 16.711, 8.19613, -79.5131)
@@ -69,10 +69,10 @@ transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 13.5, 30.4573, 13.3272, -48.957
 block_color_group = 2
 
 [node name="Player" parent="." instance=ExtResource("3_yfuw8")]
-transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -3.26626, 0.568465, 5.99063)
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 15.0718, 9.0713, -65.7155)
 
 [node name="Pet" parent="." instance=ExtResource("4_wdidq")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.805078, 0.568465, 1.62491)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 17.533, 9.0713, -70.0813)
 
 [node name="floor-button-mesh" parent="." node_paths=PackedStringArray("toggables") instance=ExtResource("5_aa15f")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -9.28818, 0.5, -0.662131)
@@ -549,3 +549,6 @@ stream = ExtResource("14_rpiy4")
 volume_db = -20.0
 autoplay = true
 script = ExtResource("15_qvusi")
+
+[node name="FinishArea" parent="." instance=ExtResource("16_4xxgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.20041, 9.61838, -65.0197)
