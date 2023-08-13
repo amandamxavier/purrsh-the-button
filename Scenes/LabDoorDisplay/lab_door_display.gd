@@ -15,14 +15,8 @@ func _process(delta):
 func _on_area_3d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if (body.get_class() == "CharacterBody3D"):
 		bodies += 1
-		print('ENTER')
 		if (bodies >= 2):
-			print('ON')
 			door.call('_toggle_on')
 
 func _on_area_3d_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
 	bodies -= 1
-	print('EXIT')
-	if (bodies < 2):
-		print('OFF')
-		door.call('_toggle_off')

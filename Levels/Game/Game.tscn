@@ -37,29 +37,17 @@ shadow_enabled = true
 [node name="BasicBlock" parent="." instance=ExtResource("2_f4qtv")]
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 30, -3.28052, 2.08165e-12, -3.56311)
 
-[node name="BasicBlock3" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(2.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.52997, 1.22185, 0.720986)
-
-[node name="BasicBlock4" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(2.5, 0, 0, 0, 3, 0, 0, 0, 1.5, 4.53, 2.002, -2.27892)
-
-[node name="BasicBlock5" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(2.5, 0, 0, 0, 4.5, 0, 0, 0, 1.5, 4.53, 2.746, -5.27892)
-
-[node name="BasicBlock6" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(2.5, 0, 0, 0, 6, 0, 0, 0, 1.5, 4.53, 3.503, -8.27842)
-
 [node name="BasicBlock2" parent="." instance=ExtResource("2_f4qtv")]
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 30, -3.28052, 6.67657, -26.6855)
 
 [node name="Player" parent="." instance=ExtResource("3_yfuw8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53071, 0.5, 4.96666)
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.53071, 0.5, 6.77283)
 
 [node name="Pet" parent="." instance=ExtResource("4_wdidq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.530707, 0.5, 2.96666)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.530707, 0.5, 4.77283)
 
 [node name="floor-button-mesh" parent="." node_paths=PackedStringArray("toggables") instance=ExtResource("5_aa15f")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.68156, 0.5, -0.662131)
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -9.28818, 0.5, -0.662131)
 toggables = [NodePath("../elevator")]
 
 [node name="Door" parent="." instance=ExtResource("6_ywwp2")]
@@ -85,6 +73,18 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.19
 
 [node name="Wall5" parent="." instance=ExtResource("7_d8824")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84382, 0.5, -11.6907)
+
+[node name="Wall28" parent="." instance=ExtResource("7_d8824")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 6.33684, -1.85736, -8.26013)
+
+[node name="Wall30" parent="." instance=ExtResource("7_d8824")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 6.33684, -3.33453, -4.44287)
+
+[node name="Wall32" parent="." instance=ExtResource("7_d8824")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 6.33684, -4.83503, -0.606263)
+
+[node name="Wall34" parent="." instance=ExtResource("7_d8824")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 6.33684, -6.36871, 3.3868)
 
 [node name="Wall6" parent="." instance=ExtResource("7_d8824")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.15514, 0.5, -11.6907)
