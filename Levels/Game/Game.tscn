@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://ckpro3x1pf2ig" path="res://Assets/Buildings/Wall.tscn" id="7_d8824"]
 [ext_resource type="PackedScene" uid="uid://2o1jjpxfu17t" path="res://Assets/Buildings/Doorway.tscn" id="8_8p28l"]
 [ext_resource type="PackedScene" uid="uid://2xmdpllnburh" path="res://Scenes/LabDoorDisplay/lab_door_display.tscn" id="8_wnxq6"]
-[ext_resource type="PackedScene" uid="uid://bgs8nbns3yooq" path="res://Scenes/Shelf/shelf.tscn" id="11_gcydy"]
 [ext_resource type="PackedScene" uid="uid://b7e6rxgf1smsi" path="res://Assets/Lava/Lava.tscn" id="12_wjcft"]
 [ext_resource type="PackedScene" uid="uid://c5dgeei133251" path="res://Assets/Elevator/elevator.tscn" id="13_hsxao"]
 [ext_resource type="PackedScene" uid="uid://bbic8ey6sjf7s" path="res://Assets/Buildings/WallRounded.tscn" id="13_twko3"]
+[ext_resource type="PackedScene" uid="uid://ch5a1b76gdrn3" path="res://Assets/Shelf/shelf.tscn" id="13_tyo1w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xgk24"]
 
@@ -54,10 +54,10 @@ transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 11.716, 6.65126, -49.499)
 block_color_group = 2
 
 [node name="Player" parent="." instance=ExtResource("3_yfuw8")]
-transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.53071, 1.37701, 5.21079)
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.53071, 7.91274, -18.1816)
 
 [node name="Pet" parent="." instance=ExtResource("4_wdidq")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.530707, 1.37701, 3.21079)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.530707, 7.91274, -20.8036)
 
 [node name="floor-button-mesh" parent="." node_paths=PackedStringArray("toggables") instance=ExtResource("5_aa15f")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -9.28818, 0.5, -0.662131)
@@ -76,13 +76,7 @@ toggables = [NodePath("../Elevator2"), NodePath("../Elevator3"), NodePath("../El
 
 [node name="floor-button-mesh3" parent="." node_paths=PackedStringArray("toggables") instance=ExtResource("5_aa15f")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -8.81125, 7.17657, -49.5346)
-toggables = [NodePath("../shelf3"), NodePath("../shelf6")]
-
-[node name="shelf3" parent="." instance=ExtResource("11_gcydy")]
-transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, -13.2744, 8.313, -31.45)
-
-[node name="shelf6" parent="." instance=ExtResource("11_gcydy")]
-transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, -13.2744, 8.313, -38.8792)
+toggables = [NodePath("../shelf"), NodePath("../shelf2")]
 
 [node name="Lava" parent="." node_paths=PackedStringArray("spawnPoint") instance=ExtResource("12_wjcft")]
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, -3.28052, 2.08165e-12, -35.9866)
@@ -353,3 +347,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.2772
 [node name="lab-door-display2" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_wnxq6")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.67057, 7.15126, -49.0096)
 door = NodePath("../Door2")
+
+[node name="shelf" parent="." instance=ExtResource("13_tyo1w")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, -13.2643, 8.33354, -38.4709)
+
+[node name="shelf2" parent="." instance=ExtResource("13_tyo1w")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, -13.2643, 8.33354, -31.0409)

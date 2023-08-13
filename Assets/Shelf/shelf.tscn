@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch5a1b76gdrn3"]
+
+[ext_resource type="PackedScene" uid="uid://dk6dkfwmvxeee" path="res://Assets/Shelf/shelf.glb" id="1_8k067"]
+[ext_resource type="Script" path="res://Assets/Shelf/shelf.gd" id="2_8ic8p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l4u6p"]
+size = Vector3(1, 0.206421, 2.00893)
+
+[node name="shelf" instance=ExtResource("1_8k067")]
+script = ExtResource("2_8ic8p")
+
+[node name="shelf2" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shelf2" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shelf2/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.492782, 0.090162, -0.327396)
+shape = SubResource("BoxShape3D_l4u6p")
