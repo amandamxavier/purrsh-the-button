@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://siwb7nupg021"]
+[gd_scene load_steps=19 format=3 uid="uid://siwb7nupg021"]
 
 [ext_resource type="Script" path="res://Levels/Game/Game.gd" id="1_ouojl"]
 [ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="2_f4qtv"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://c5dgeei133251" path="res://Assets/Elevator/elevator.tscn" id="13_hsxao"]
 [ext_resource type="PackedScene" uid="uid://bbic8ey6sjf7s" path="res://Assets/Buildings/WallRounded.tscn" id="13_twko3"]
 [ext_resource type="PackedScene" uid="uid://ch5a1b76gdrn3" path="res://Assets/Shelf/shelf.tscn" id="13_tyo1w"]
+[ext_resource type="AudioStream" uid="uid://cfvk4m6r06j2s" path="res://Assets/Musics/Main.ogg" id="14_rpiy4"]
+[ext_resource type="Script" path="res://Levels/Game/AudioStreamPlayer.gd" id="15_qvusi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xgk24"]
 
@@ -540,3 +542,8 @@ toggables = [NodePath("../Door3")]
 [node name="lab-door-display3" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_wnxq6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.7728, 7.15126, -65.0791)
 door = NodePath("../Door4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_rpiy4")
+autoplay = true
+script = ExtResource("15_qvusi")

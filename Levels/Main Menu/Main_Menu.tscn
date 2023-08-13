@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqfk8jf2de4kb"]
+[gd_scene load_steps=5 format=3 uid="uid://bqfk8jf2de4kb"]
 
 [ext_resource type="VideoStream" path="res://Assets/Videos/MainMenu.ogv" id="1_nmgaj"]
 [ext_resource type="Script" path="res://Levels/Main Menu/VideoStreamPlayer.gd" id="2_d0d3v"]
+[ext_resource type="AudioStream" uid="uid://cfvk4m6r06j2s" path="res://Assets/Musics/Main.ogg" id="3_woalh"]
+[ext_resource type="Script" path="res://Levels/Main Menu/AudioStreamPlayer.gd" id="4_sdrll"]
 
 [node name="Main_Menu" type="Node2D"]
 
@@ -16,3 +18,8 @@ stream = ExtResource("1_nmgaj")
 autoplay = true
 expand = true
 script = ExtResource("2_d0d3v")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VideoStreamPlayer"]
+stream = ExtResource("3_woalh")
+autoplay = true
+script = ExtResource("4_sdrll")
