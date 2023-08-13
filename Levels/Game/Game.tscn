@@ -546,5 +546,6 @@ door = NodePath("../Door4")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_rpiy4")
+volume_db = -20.0
 autoplay = true
 script = ExtResource("15_qvusi")
