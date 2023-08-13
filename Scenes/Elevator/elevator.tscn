@@ -9,6 +9,9 @@ data = PackedVector3Array(-0.25, -0.25, 0.25, -0.25, 3.7366, -0.25, -0.25, 3.736
 [node name="elevator" instance=ExtResource("1_kee8j")]
 script = ExtResource("2_22qdu")
 
+[node name="Cube_001" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1.61191, 0, 0, 0, 1, 2.08165e-12, 0.405906, 2.08165e-12)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube_001" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.255956, 0)
 

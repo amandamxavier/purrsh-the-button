@@ -1,8 +1,8 @@
 extends Node3D
 
 var pos = $Cube_001.position
-var yPosUp = 0
-var yPosDown = -3.722
+var yPosUp = 0.406
+var yPosDown = -5.985
 var yPosDefault = yPosDown
 var yPosActive = yPosUp
 
