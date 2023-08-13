@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cydlcl25a08uk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7o3e"]
+cull_mode = 1
+shading_mode = 0
+albedo_color = Color(0.976471, 0.792157, 0.803922, 1)
+grow = true
+grow_amount = 0.02
+
+[resource]
+resource_name = "frigobar02"
+next_pass = SubResource("StandardMaterial3D_n7o3e")
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.913726, 0.631373, 0.635294, 1)
+metallic_specular = 0.0
+roughness = 0.0
