@@ -1,13 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://siwb7nupg021"]
+[gd_scene load_steps=10 format=3 uid="uid://siwb7nupg021"]
 
 [ext_resource type="Script" path="res://Levels/Game/Game.gd" id="1_ouojl"]
 [ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="2_f4qtv"]
 [ext_resource type="PackedScene" uid="uid://7gv6q50fuutj" path="res://Scenes/Player/player.tscn" id="3_yfuw8"]
 [ext_resource type="PackedScene" uid="uid://bhonqb46wwjn5" path="res://Scenes/Pet/pet.tscn" id="4_wdidq"]
 [ext_resource type="PackedScene" uid="uid://cfch5btef6n71" path="res://Scenes/FloorButton/FloorButton.tscn" id="5_aa15f"]
-[ext_resource type="PackedScene" uid="uid://bfh00lybg3g54" path="res://Scenes/Elevator/elevator.tscn" id="6_apl4s"]
-[ext_resource type="PackedScene" uid="uid://isfvqna3kvd0" path="res://Scenes/LabDoor/lab_door.tscn" id="7_10o26"]
-[ext_resource type="PackedScene" uid="uid://2xmdpllnburh" path="res://Scenes/LabDoorDisplay/lab_door_display.tscn" id="8_wnxq6"]
+[ext_resource type="PackedScene" uid="uid://vfbi06tnmy7c" path="res://Assets/Door/Door.tscn" id="6_ywwp2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xgk24"]
 
@@ -32,46 +30,8 @@ light_indirect_energy = 0.884
 light_volumetric_fog_energy = 0.768
 shadow_enabled = true
 
-[node name="BasicBlock3" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(1, 0, 0, 0, 10, 0, 0, 0, 30, 6.19692, 4.47373, -0.295)
-block_color_group = 3
-block_style = 2
-
-[node name="BasicBlock4" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(1, 0, 0, 0, 10, 0, 0, 0, 30, -4.72896, 4.47373, -0.295)
-block_color_group = 3
-block_style = 2
-
-[node name="BasicBlock5" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(-4.37114e-08, 0, -11.3367, 0, 10, 0, 1, 0, -4.95543e-07, 0.797836, 4.47373, 10.5805)
-block_color_group = 3
-block_style = 2
-
-[node name="BasicBlock6" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(-4.37114e-08, 0, -11.3367, 0, 10, 0, 1, 0, -4.95543e-07, 0.797836, 4.47373, -14.0926)
-block_color_group = 3
-block_style = 2
-
 [node name="BasicBlock" parent="." instance=ExtResource("2_f4qtv")]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 20, 0.713, 2.08165e-12, 2.08165e-12)
-
-[node name="BasicBlock2" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(4, 0, 0, 0, 4.25, 0, 0, 0, 5.58341, 0.7, 2.52262, -10.806)
-
-[node name="BasicBlock7" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(10, 0, 0, 0, 2.125, 0, 0, 0, 5.58341, 0.735301, 1.56134, -10.7933)
-
-[node name="BasicBlock8" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(2.934, 0, 0, 0, 1.063, 0, 0, 0, 5.58341, -2.76574, 1.03414, -6.79933)
-
-[node name="BasicBlock10" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(-3.58034e-07, 0, -1.5, 0, 1.063, 0, 8.19086, 0, -6.55671e-08, -2.03653, 3.14885, -12.1465)
-
-[node name="BasicBlock11" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(-3.58034e-07, 0, -1.5, 0, 1.063, 0, 8.19086, 0, -6.55671e-08, 3.45449, 3.14885, -12.1465)
-
-[node name="BasicBlock9" parent="." instance=ExtResource("2_f4qtv")]
-transform = Transform3D(2.934, 0, 0, 0, 1.063, 0, 0, 0, 5.58341, 4.21569, 1.03414, -6.79933)
 
 [node name="Player" parent="." instance=ExtResource("3_yfuw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.721607, 0.5, 9)
@@ -81,15 +41,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72161, 0.5, 7)
 
 [node name="floor-button-mesh" parent="." node_paths=PackedStringArray("toggables") instance=ExtResource("5_aa15f")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.7, 0.5, 2)
-toggables = [NodePath("../elevator")]
+toggables = [NodePath("../Door")]
 
-[node name="elevator" parent="." instance=ExtResource("6_apl4s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.5, -6.006)
-defaultIsOnTop = true
-
-[node name="lab-door" parent="." instance=ExtResource("7_10o26")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 6.156, -13.581)
-
-[node name="lab-door-display" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_wnxq6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 4.648, -13.546)
-door = NodePath("../lab-door")
+[node name="Door" parent="." instance=ExtResource("6_ywwp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51518, 0.5, -2.04832)
