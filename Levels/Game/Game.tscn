@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://siwb7nupg021"]
+[gd_scene load_steps=20 format=3 uid="uid://siwb7nupg021"]
 
 [ext_resource type="Script" path="res://Levels/Game/Game.gd" id="1_ouojl"]
 [ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="2_f4qtv"]
+[ext_resource type="Script" path="res://addons/devblocks/blocks/finishblock.gd" id="3_oj27e"]
 [ext_resource type="PackedScene" uid="uid://7gv6q50fuutj" path="res://addons/devblocks/blocks/player.tscn" id="3_yfuw8"]
 [ext_resource type="PackedScene" uid="uid://bhonqb46wwjn5" path="res://Scenes/Pet/pet.tscn" id="4_wdidq"]
 [ext_resource type="PackedScene" uid="uid://cfch5btef6n71" path="res://Scenes/FloorButton/FloorButton.tscn" id="5_aa15f"]
@@ -55,9 +56,9 @@ block_color_group = 2
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 40, 16.711, 6.65126, -61.9051)
 block_color_group = 2
 
-[node name="BasicBlock7" parent="." instance=ExtResource("2_f4qtv")]
+[node name="FinishBlock" parent="." instance=ExtResource("2_f4qtv")]
 transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 5, 10.1669, 9.53662, -64.3111)
-block_color_group = 1
+script = ExtResource("3_oj27e")
 
 [node name="BasicBlock6" parent="." instance=ExtResource("2_f4qtv")]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 16.711, 8.19613, -79.5131)
