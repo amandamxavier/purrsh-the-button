@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+
 @onready var active = false
 @onready var Cam = $Head/Camera3d as Camera3D
 @export var _bullet_scene : PackedScene
@@ -8,14 +9,15 @@ var mouse_relative_x = 0
 var mouse_relative_y = 0
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+
 
 func _ready():
 	if active:
 		#Captures mouse and stops rgun from hitting yourself
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		
 func _physics_process(delta):
 	if active:
 		# Add the gravity.
