@@ -11,12 +11,16 @@ config_version=5
 [application]
 
 config/name="G4fps"
-run/main_scene="res://addons/devblocks/levels/node_3d.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 
 [autoload]
 
 Settings="*res://Global/Settings.gd"
+
+[display]
+
+window/size/viewport_width=1366
+window/size/viewport_height=768
 
 [input]
 
