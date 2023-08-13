@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqfk8jf2de4kb"]
+
+[ext_resource type="VideoStream" path="res://Assets/Videos/MainMenu.ogv" id="1_nmgaj"]
+[ext_resource type="Script" path="res://Levels/Main Menu/VideoStreamPlayer.gd" id="2_d0d3v"]
+
+[node name="Main_Menu" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -685.0
+offset_top = -389.0
+offset_right = 684.0
+offset_bottom = 387.0
+stream = ExtResource("1_nmgaj")
+autoplay = true
+expand = true
+script = ExtResource("2_d0d3v")
