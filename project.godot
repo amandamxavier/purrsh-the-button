@@ -10,9 +10,13 @@ config_version=5
 
 [application]
 
-config/name="G4fps"
-run/main_scene="res://Levels/Main Menu/Main_Menu.tscn"
+config/name="Purrsh the Button!"
+config/description="Chegou o dia que Catelyn sempre sonhou: A exposição de robótica do bairro. Ela não vê a hora de mostrar a todos seu novo melhor amigo gato, o coiso pixel. Mas enquanto se preparava para sair, seu gato robô preguiçosamente aperta o grande botão vermelho na mesa e ativa o sistema de segurança, deixando os presos no laboratório.
+
+Será que trabalhando juntos eles conseguirão atravessar armadilhas, lasers e puzzles antes que a exposição acabe?"
+run/main_scene="res://Scenes/MainMenu/main-menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+config/icon="res://icon.png"
 
 [autoload]
 
@@ -22,7 +26,6 @@ Settings="*res://Global/Settings.gd"
 
 window/size/viewport_width=1366
 window/size/viewport_height=768
-window/size/mode=2
 window/stretch/mode="viewport"
 
 [input]
@@ -64,6 +67,11 @@ moveUp={
 switchPlayer={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194306,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+quitGame={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 
