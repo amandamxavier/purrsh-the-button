@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cp0c6pyytlahn"]
+
+[resource]
+resource_name = "tuboX03"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0.727433, 0.898687, 1)
+roughness = 0.78125
+emission_enabled = true
+emission = Color(0, 0.810549, 1, 1)

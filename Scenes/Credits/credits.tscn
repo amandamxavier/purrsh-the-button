@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4mnr5daiqtmv"]
+
+[ext_resource type="Script" path="res://Scenes/Credits/credits.gd" id="1_h0ajt"]
+[ext_resource type="VideoStream" path="res://Assets/Videos/Credits.ogv" id="1_vtsyp"]
+[ext_resource type="Script" path="res://Scenes/Credits/VideoStreamPlayer.gd" id="2_kulqu"]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_h0ajt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -685.0
+offset_top = -389.0
+offset_right = 684.0
+offset_bottom = 387.0
+stream = ExtResource("1_vtsyp")
+autoplay = true
+expand = true
+script = ExtResource("2_kulqu")

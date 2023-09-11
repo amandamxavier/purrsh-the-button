@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7e6rxgf1smsi"]
+
+[ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="1_571y3"]
+[ext_resource type="Script" path="res://Assets/Lava/Lava.gd" id="1_dalub"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3yche"]
+
+[node name="Lava" type="Node3D"]
+script = ExtResource("1_dalub")
+
+[node name="BasicBlock" parent="." instance=ExtResource("1_571y3")]
+block_color_group = 5
+
+[node name="Area3D" type="Area3D" parent="BasicBlock"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BasicBlock/Area3D"]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+shape = SubResource("BoxShape3D_3yche")
+
+[connection signal="body_entered" from="BasicBlock/Area3D" to="." method="_on_area_3d_body_entered"]

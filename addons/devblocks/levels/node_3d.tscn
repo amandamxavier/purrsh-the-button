@@ -1,0 +1,135 @@
+[gd_scene load_steps=15 format=3 uid="uid://ctahsvj88g1om"]
+
+[ext_resource type="Script" path="res://addons/devblocks/levels/node_3d.gd" id="1_knxh2"]
+[ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="2_qqg3n"]
+[ext_resource type="PackedScene" uid="uid://7gv6q50fuutj" path="res://addons/devblocks/blocks/player.tscn" id="3_31o6n"]
+[ext_resource type="PackedScene" uid="uid://bhonqb46wwjn5" path="res://Scenes/Pet/pet.tscn" id="4_2867o"]
+[ext_resource type="Texture2D" uid="uid://cgp4mvev1cbra" path="res://addons/devblocks/textures/purple/texture_01.png" id="5_aiqpk"]
+[ext_resource type="PackedScene" uid="uid://cfch5btef6n71" path="res://Scenes/FloorButton/FloorButton.tscn" id="6_cq7nj"]
+[ext_resource type="PackedScene" uid="uid://isfvqna3kvd0" path="res://Scenes/LabDoor/lab_door.tscn" id="7_67te5"]
+[ext_resource type="PackedScene" uid="uid://bfh00lybg3g54" path="res://Scenes/Elevator/elevator.tscn" id="8_k6m3w"]
+[ext_resource type="PackedScene" uid="uid://bgs8nbns3yooq" path="res://Scenes/Shelf/shelf.tscn" id="9_8t5ri"]
+[ext_resource type="PackedScene" uid="uid://2xmdpllnburh" path="res://Scenes/LabDoorDisplay/lab_door_display.tscn" id="10_85jtx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
+
+[sub_resource type="Sky" id="Sky_4e344"]
+sky_material = SubResource("ProceduralSkyMaterial_6g5uc")
+
+[sub_resource type="Environment" id="Environment_l5pxq"]
+background_mode = 2
+background_color = Color(0.2139, 0.570975, 0.69, 1)
+sky = SubResource("Sky_4e344")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2gtf0"]
+albedo_texture = ExtResource("5_aiqpk")
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+
+[node name="Node3d" type="Node3D"]
+script = ExtResource("1_knxh2")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_l5pxq")
+
+[node name="BasicBlock4" parent="." instance=ExtResource("2_qqg3n")]
+transform = Transform3D(9.10803, 0, 0, 0, 1, 0, 0, 0, 9, 1.01382, 1.62196, -31.5179)
+block_color_group = 1
+block_style = 2
+
+[node name="Player" parent="." instance=ExtResource("3_31o6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02583, 0.758431, 8.47266)
+
+[node name="Pet" parent="." instance=ExtResource("4_2867o")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 3.96068, 0.546736, -4.48191)
+
+[node name="DirectionalLight3d" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.966349, 0.250904, -0.0567091, 0.182362, -0.512743, 0.838951, 0.181419, -0.821061, -0.541244, -0.00693703, 59.5145, -109.348)
+light_energy = 1.232
+light_indirect_energy = 0.884
+light_volumetric_fog_energy = 0.768
+shadow_enabled = true
+
+[node name="BasicBlock3" parent="." instance=ExtResource("2_qqg3n")]
+transform = Transform3D(2, 0, 0, 0, 5, 0, 0, 0, 30, 9.667, 2.735, -0.295)
+block_color_group = 3
+block_style = 2
+
+[node name="BasicBlock6" parent="." instance=ExtResource("2_qqg3n")]
+transform = Transform3D(2, 0, 0, 0, 5, 0, 0, 0, 30, -6.993, 2.735, -0.674)
+block_color_group = 3
+block_style = 2
+
+[node name="BasicBlock7" parent="." instance=ExtResource("2_qqg3n")]
+transform = Transform3D(-8.62825e-08, 0, 18.6346, 0, 5, 0, -1.97391, 0, -8.14545e-07, 1.38839, 2.735, 13.745)
+block_color_group = 3
+block_style = 2
+
+[node name="BasicBlock8" parent="." instance=ExtResource("2_qqg3n")]
+transform = Transform3D(-8.40446e-08, 0, 6.97454, 0, 5, 0, -1.92272, 0, -3.04867e-07, -3.328, 2.73494, -8.387)
+block_color_group = 3
+block_style = 2
+
+[node name="BasicBlock9" parent="." instance=ExtResource("2_qqg3n")]
+transform = Transform3D(-8.40446e-08, 0, 6.97454, 0, 5, 0, -1.92272, 0, -3.04867e-07, 5.64139, 2.735, -8.387)
+block_color_group = 3
+block_style = 2
+
+[node name="BasicBlock10" parent="." instance=ExtResource("2_qqg3n")]
+transform = Transform3D(-8.40446e-08, 0, 6.97454, 0, 1.89781, 0, -1.92272, 0, -3.04867e-07, 1.07447, 4.27591, -8.3874)
+block_color_group = 3
+block_style = 2
+
+[node name="BasicBlock" parent="." instance=ExtResource("2_qqg3n")]
+transform = Transform3D(17.0851, 0, 0, 0, 1, 0, 0, 0, 43.6855, 0.712892, 4.76837e-07, -7.2007)
+
+[node name="BasicBlock2" parent="." instance=ExtResource("2_qqg3n")]
+transform = Transform3D(6.981, 0, 0, 0, 1, 0, 0, 0, 4.093, 1.10867, 0.908197, -22.4728)
+block_color_group = 1
+block_style = 2
+
+[node name="CsgPolygon3d" type="CSGPolygon3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -4.56775, 0.523835, -15.3289)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 1, 0, 1, 1, 0)
+material = SubResource("StandardMaterial3D_2gtf0")
+
+[node name="BasicBlock5" parent="." instance=ExtResource("2_qqg3n")]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 4, 5.44529, 2.84246, -14.9207)
+block_color_group = 1
+block_style = 2
+
+[node name="floor-button-mesh" parent="." node_paths=PackedStringArray("toggables") instance=ExtResource("6_cq7nj")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.998839, 0.5, 0.782574)
+toggables = [NodePath("../lab-door")]
+
+[node name="floor-button-mesh2" parent="." node_paths=PackedStringArray("toggables") instance=ExtResource("6_cq7nj")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.998839, 2.18059, -30.1444)
+toggables = [NodePath("../lab-door")]
+
+[node name="lab-door" parent="." instance=ExtResource("7_67te5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1436, 2.0007, -8.01769)
+
+[node name="elevator" parent="." instance=ExtResource("8_k6m3w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98243, 0.5, -5.39237)
+
+[node name="floor-button-mesh3" parent="." node_paths=PackedStringArray("toggables") instance=ExtResource("6_cq7nj")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.55121, 0.5, 0.309497)
+toggables = [NodePath("../elevator"), NodePath("../lab-door")]
+
+[node name="shelf" parent="." instance=ExtResource("9_8t5ri")]
+transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, 8.66178, 1.7382, 2.9546)
+
+[node name="floor-button-mesh4" parent="." node_paths=PackedStringArray("toggables") instance=ExtResource("6_cq7nj")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.15414, 0.5, 6.11858)
+toggables = [NodePath("../shelf"), NodePath("../shelf2")]
+
+[node name="shelf2" parent="." instance=ExtResource("9_8t5ri")]
+transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, 8.66178, 1.7382, -0.196228)
+
+[node name="lab-door2" parent="." instance=ExtResource("7_67te5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.73198, 2.00475, 4.86385)
+
+[node name="lab-door-display" parent="." node_paths=PackedStringArray("door") instance=ExtResource("10_85jtx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.73198, 2.08165e-12, 4.86385)
+door = NodePath("../lab-door2")
