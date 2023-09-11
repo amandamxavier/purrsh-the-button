@@ -4,7 +4,7 @@
 
 <details>
     <summary>Screenshot of the game</summary>
-    <!-- <img src="SCREENSHOT.png"> -->
+    <img src="SCREENSHOT.png">
 </details>
 
 ## 📋 Requirements
